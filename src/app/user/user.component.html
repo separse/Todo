@@ -1,0 +1,15 @@
+<ul *ngFor="let film of movie; let i = index">
+  <li>{{i}}: {{film}}</li>
+  <button (click)="deleteFilm(film)">Delete</button>
+</ul>
+
+<form (submit)="printFilm()">
+  <div>
+    <label for="film">Your Films</label>
+    <input type="text" id="film" name="film" [(ngModel)]="film">
+  </div>
+</form>
+
+<ul *ngFor="let film of movies">
+  <li>{{film.title}}</li>
+</ul>
