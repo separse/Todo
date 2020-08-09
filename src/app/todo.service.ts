@@ -10,10 +10,12 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+
 export class TodoService {
+
 todosUrl = 'http://jsonplaceholder.typicode.com/todos';
 
-constructor(private http: HttpClient) { }
+constructor(private http: HttpClient) {}
 
 getTodos(): Observable<Todo[]>{
   return this.http.get<Todo[]>(this.todosUrl + '?_limit=5');
